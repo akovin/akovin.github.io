@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About me</title>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/styles.css">
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <a href="/en">
+            <span>EN</span>
+        </a>
+        <span>|</span>
+        <a href="/">
+            <span>RU</span>
+        </a>
+    </div>
+    <div class="content">
+        <div class="content__hello">
+            <img class="content__hello-img" src="/assets/img/avatar.png" alt="Avatar">
+            <div class="content__hello-text">
+                    <span class="content__name">
+                        <a href="/"> Привет, меня зовут Антон.</a>
+                    </span>
+                <span class="content__description">Представляю тебе один из своих проектов</span>
+                <nav class="content__social">
+                    <a href="https://t.me/anton_dolphin" target="_blank" class="content__social-item">
+                        <img src="/assets/img/icons/telegram.svg" alt="Telegram">
+                        <span>Telegram</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <div class="content__main">
+            <h1 class="content__about-header">Автоматизация проверки на мошенничество в сфере автострахования</h1>
+            <div class="content__main-item">
+                <div class="main-item__description">
+                    <p>Интеллектуальная система позволяет определять мошенничество в сфере автострахования с точностью 96%</p>
+                </div>
+            </div>
+            <div class="content__main-item">
+                <div class="main-item__description">
+                    <img src="/assets/img/moscow_city.png" alt="project">
+                </div>
+            </div>
+            <div class="content__main-item">
+                <div class="main-item__description">
+                                        <h2>Структура базы данных, применяемой для обучения и тестирования</h2>
+
+                    <p>Итоговая база данных, применяемая для обучения, содержит 21745 строк и 19 признаков. База данных для тестирования содержит 7249 строк и 19 признаков аналогично.</p>
+
+                    <ol>
+                        <li>
+                            <strong>AccidentArea</strong>: Область, где произошло ДТП.
+                            <ul>
+                                <li>Возможные значения: 'Urban' (городская), 'Rural' (сельская)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Sex</strong>: Пол водителя.
+                            <ul>
+                                <li>Возможные значения: 'Male' (мужчина), 'Female' (женщина)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>MaritalStatus</strong>: Семейное положение водителя.
+                            <ul>
+                                <li>Возможные значения: 'Single' (не женат/не замужем), 'Married' (женат/замужем), 'Divorced' (разведен/разведена)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Fault</strong>: Виновник ДТП.
+                            <ul>
+                                <li>Возможные значения: 'Policy Holder' (страхователь), 'Third Party' (третьи лица)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Year</strong>: Год выпуска полиса.
+                        </li>
+                        <li>
+                            <strong>DriverRating</strong>: Рейтинг водителя.
+                            <ul>
+                                <li>Числовые значения, отражающие рейтинг водителя, от 1 до 5</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Days:Policy-Accident</strong>: Количество дней между началом действия полиса и ДТП.
+                        </li>
+                        <li>
+                            <strong>Days:Policy-Claim</strong>: Количество дней между началом действия полиса и подачей заявления.
+                        </li>
+                        <li>
+                            <strong>PastNumberOfClaims</strong>: Количество предыдущих заявлений по страховым случаям.
+                        </li>
+                        <li>
+                            <strong>AgeOfVehicle</strong>: Возраст автомобиля.
+                        </li>
+                        <li>
+                            <strong>AgeOfPolicyHolder</strong>: Возраст страхователя.
+                        </li>
+                        <li>
+                            <strong>PoliceReportFiled</strong>: Наличие полицейского отчета.
+                            <ul>
+                                <li>Возможные значения: 'Yes' (да), 'No' (нет)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>WitnessPresent</strong>: Присутствие свидетелей.
+                            <ul>
+                                <li>Возможные значения: 'Yes' (да), 'No' (нет)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>AgentType</strong>: Тип страхового агента.
+                            <ul>
+                                <li>Возможные значения: 'Internal' (внутренний), 'External' (внешний)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>NumberOfSuppliments</strong>: Количество прилагаемых документов к заявлению.
+                        </li>
+                        <li>
+                            <strong>AddressChange-Claim</strong>: Количество изменений адреса до подачи заявления.
+                        </li>
+                        <li>
+                            <strong>NumberOfCars</strong>: Количество автомобилей, застрахованных в полисе.
+                        </li>
+                        <li>
+                            <strong>BasePolicy</strong>: Основной тип полиса:
+                            <ul>
+                                <li><strong>Liability</strong> (ответственность): Страхование ответственности покрывает убытки, нанесенные третьим лицам в результате ДТП.</li>
+                                <li><strong>Collision</strong> (столкновение): Этот тип полиса покрывает повреждения автомобиля страхователя в результате столкновения.</li>
+                                <li><strong>Comprehensive</strong> (комплексное): Комплексное страхование покрывает широкий спектр рисков, включая кражу, вандализм, природные бедствия и столкновения.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>FraudFound</strong>: Наличие мошенничества. (предсказываемый признак)
+                            <ul>
+                                <li>Возможные значения: 'Yes' (да), 'No' (нет)</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="content__main-item">
+            <div class="content__main-item">
+                <div class="main-item__description">
+                    
+                        <li>
+                            <strong>Выполнено обучение и тестирование</strong> 4-х алгоритмов: CatBoostRegressor, случайный лес (Scikit Learn), k-случайных соседей (Scikit Learn), нейронная сеть (Keras).
+                        </li>
+                        <li>
+                            <strong>Выполнена оценка качества работы</strong> алгоритмов по двум метрикам: Mean Absolute Percentage Error, Mean Absolute Error.<br>
+                        </li>
+                        <li>
+                            <strong>Построены диаграммы</strong> со значениями метрик MAPE, MAE.
+                        </li>
+
+                    
+                </div>
+            </div>
+            <div class="main-item__description">
+                <img src="/assets/img/mae.png" alt="project">
+            </div>
+            <div class="main-item__description">
+                <img src="/assets/img/mape.png" alt="project">
+            </div>
+            <div class="content__main-item">
+                <div class="main-item__description">
+                    <li>
+                        Лучшие результаты показал CatBoostRegressor:<br>
+                        MAPE: 12.9%<br>
+                        MAE: 3099514 рублей
+                    </li>
+                    <p><strong>Данные результаты говорят о том, что разработанную систему нельзя использовать для автоматического назначения цены, но можно использовать в качестве системы для быстрой оценки недвижимости и рекомендации её примерной стоимости.</strong></p>                
+                </div>
+            </div>
+            <p class="main-item__links"><a href="https://github.com/akovin/flat_cost_prediction"><span>Source Code</span></a><span></span>
+                <!-- <a href=""><span>Preview</span></a>  -->
+            </p>
+    </div>
+    <div class="footer">
+        <div>
+            <span>© A.K.</span>
+        </div>
+    </div>
+</div>
+<script src="/assets/scripts/fslightbox.js"></script>
+</body>
+</html>
