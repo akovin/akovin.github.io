@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 /***
     The new CSS reset - version 1.7.3 (last updated 7.8.2022)
     GitHub page: https://github.com/elad2412/the-new-css-reset
@@ -83,11 +84,81 @@ meter {
     -webkit-user-drag: element;
 }
 
+/* Основные стили для body */
 body {
     font-family: 'Roboto', sans-serif;
     color: #333131;
+    line-height: 1.6;
+    margin: 20px;
 }
 
+/* Стили для заголовков */
+h3 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+h4 {
+    color: #34495e;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Стили для параграфов */
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Стили для списков */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Верхний индекс (например, для м²) */
+sup {
+    font-size: 0.8em;
+    vertical-align: super;
+}
+
+/* Акцентирование чисел и значений */
+li strong {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Подчеркивание источника данных */
+p:last-of-type {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: 20px;
+}
+
+/* Дополнительные стили для улучшения читаемости */
+p:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+/* Подсветка заголовков списков */
+h4 + ul {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Стили для ссылок */
 a {
     color: black;
     font-weight: 600;
@@ -97,6 +168,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Темная тема */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: black;
@@ -107,156 +179,43 @@ a:hover {
         color: #fff;
     }
 
-    .content__social-item img,
-    .footer__social-item img{
-        filter: invert(1);
+    h3 {
+        color: #3498db;
+        border-bottom-color: #2980b9;
+    }
+
+    h4 {
+        color: #bdc3c7;
+    }
+
+    li strong {
+        color: #e74c3c;
+    }
+
+    p:last-of-type {
+        color: #95a5a6;
+    }
+
+    h4 + ul {
+        background-color: #2c3e50;
+        border-color: #34495e;
     }
 }
 
+/* Контейнер для основного контента */
 .main {
     margin: auto;
-    width: 47.5rem;
+    max-width: 47.5rem;
 }
 
-.content__hello {
-    display: flex;
-    margin-top: 4.2rem;
-    margin-bottom: 5rem;
-    font-size: 28px;
-    line-height: 2.8rem;
-}
-
-.content__hello-img {
-    width: 142px;
-    height: 142px;
-    min-width: 142px;
-    border-radius: 50%;
-    border: 3px solid silver;
-}
-
-.content__hello-text {
-    margin-left: 2.2rem;
-    line-height: 2.7rem;
-    margin-top: 5px;
-}
-
-.content__name a {
-    font-weight: 700;
-    letter-spacing: 0.03em;
-}
-
-.content__description {
-    font-weight: 700;
-    letter-spacing: 0.03em;
-}
-
-.header {
-    display: flex;
-    justify-content: end;
-    margin-top: 0.2rem;
-}
-.header span {
-    margin-left: 3px;
-}
-
-.content__social {
-    display: flex;
-    max-width: 36rem;
-    font-size: 18px;
-    padding-top: 5px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    flex: 1 1 0%;
-    -webkit-box-pack: start;
-    justify-content: space-between;
-}
-.content__social-item {
-    display: flex;
-    align-items: center;
-}
+/* Стили для социальных иконок */
 .content__social-item img {
     width: 22px;
     height: 22px;
     margin-right: 4px;
 }
 
-.content__about-header {
-    font-size: 2.4rem;
-    margin-bottom: 1.4rem;
-    line-height: 4rem;
-    text-transform: uppercase;
-}
-
-.content__subheader {
-    font-size: 1.4rem;
-    line-height: 4rem;
-    text-transform: uppercase;
-}
-
-.content__main-item {
-    display: flex;
-    line-height: 1.8rem;
-    margin-bottom: 1.8rem;
-}
-.content__main-item.project img {
-    max-width: 300px;
-    height: auto;
-    margin-right: 10px;
-    border-radius: 25px;
-}
-
-.main-item__description img {
-    border-radius: 25px;
-}
-
-.project .main-item__title {
-    font-weight: 500;
-    font-size: 28px;
-}
-
-.project .main-item__links span {
-    margin-right: 4px;
-}
-
-.project .main-item__description {
-    font-weight: 100;
-    margin-top: 1rem;
-}
-
-.project .main-item__subdescription {
-    font-weight: 200;
-    margin-top: 1rem;
-}
-.project .main-item__subdescription span {
-    font-weight: 400;
-}
-
-.post .main-item__title{
-    font-size: 1.48rem;
-    line-height: 2rem;
-    font-weight: 500;
-    letter-spacing: .05rem;
-}
-
-.post .main-item__title a{
-    box-shadow: none;
-    letter-spacing: 0.03em;
-}
-
-.post .main-item__date {
-    display: inline-block;
-    font-size: .94rem;
-    font-weight: 700;
-    line-height: 1.55rem;
-}
-
-.post .main-item__description {
-    line-height: 1.8rem;
-    margin-top: -0.2rem;
-    margin-bottom: 0.8rem;
-}
-
+/* Стили для футера */
 .footer {
     margin-top: 2rem;
     display: flex;
